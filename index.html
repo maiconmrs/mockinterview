@@ -16,10 +16,9 @@
 
         .container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             width: 90%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
         }
 
@@ -29,22 +28,39 @@
             padding-top: 30px;
             min-height: 70px;
             border-bottom: #77b300 3px solid;
+            text-align: center;
         }
 
         header h1 {
-            text-align: center;
             text-transform: uppercase;
             margin: 0;
             font-size: 24px;
         }
 
+        .columns {
+            display: flex;
+            flex-direction: column;
+        }
+
         .column {
             background: #fff;
-            margin: 20px;
+            margin: 10px 0;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 48%;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .columns {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .column {
+                width: 48%;
+                margin: 10px 0;
+            }
         }
 
         h2 {
@@ -88,7 +104,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container columns">
         <!-- Left Column: Company Information -->
         <div class="column">
             <h2>About TechVerse Solutions</h2>
@@ -138,9 +154,9 @@
             <h3>Interview Process:</h3>
             <p>Our interview process includes a 30-minute session consisting of both HR and technical components:</p>
             <ul>
-                <li><strong>HR Interview (10 minutes):</strong> Discuss your career goals, cultural fit, and how you
+                <li><strong>HR Interview (15 minutes):</strong> Discuss your career goals, cultural fit, and how you
                     align with our core principles.</li>
-                <li><strong>Technical Interview (20 minutes):</strong> Review the project you selected in your
+                <li><strong>Technical Interview (15 minutes):</strong> Review the project you selected in your
                     application, and discuss your approach and learning experiences.</li>
             </ul>
             <h3>Application Tips:</h3>
